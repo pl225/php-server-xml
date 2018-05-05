@@ -9,9 +9,9 @@
 		
 		$(document).ready(function () {
 				
-			$.get({
-				url: 'http://localhost:8080',
-				data: { xml: "<methodCall><methodName>consultarStatus</methodName><params><param><cpf>5555</cpf></param></params></methodCall>"},
+			$.post({
+				url: 'http://localhost:8080/server.php',
+				data: { xml: "<methodCall><methodName>consultarStatus</methodName><params><param><cpf>00000000004</cpf></param></params></methodCall>"},
 				contentType: "text/xml",
 				success: function (data) {
 					console.log(data);
